@@ -5,6 +5,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed = 2;
 
+    [SerializeField]
+    public bool fight = false;
+
     // Update is called once per frame
     private void Update()
     {
@@ -13,7 +16,11 @@ public class Player : MonoBehaviour
 
         Vector3 direction = Vector3.zero;
         direction.x = rawHorizontalAxis;
-        direction.y = rawVerticalAxis;
+
+        if (fight == false)
+        {
+            direction.y = rawVerticalAxis;
+        }
 
         float timeSinceLastFrame = Time.deltaTime;
 
