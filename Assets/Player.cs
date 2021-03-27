@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
-    private Vector3 move = Vector3.zero;
-
     [SerializeField]
     private float speed = 2;
 
@@ -24,8 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float spinSpeed = 500.0f;
 
-    [SerializeField]
-    private bool onGround = false;
+    bool shouldMove = true;
 
     private void Awake()
     {
@@ -35,33 +32,39 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        float rawHorizontalAxis = Input.GetAxisRaw("Horizontal");
-        float rawVerticalAxis = Input.GetAxisRaw("Vertical");
-
-       /*
-        else if (onGround == false)
-            {
-                transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
-                transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
-            }
-        */
-
-        move.x = rawHorizontalAxis;
-        if(fight == false)
+        if (Input.GetKey(KeyCode.UpArrow) && shouldMove)
         {
-            move.y = rawVerticalAxis;
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
-         
-    }
-    
-    private void FixedUpdate()
-    {
-        if(move != Vector3.zero)
-        {
-            Vector3 translation = move * speed * Time.fixedDeltaTime;
-            Vector3 newPosition = transform.position + translation;
 
-            rb2d.MovePosition(newPosition);
+        if (Input.GetKey(KeyCode.DownArrow) && shouldMove)
+        {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+        /*
+         else if (onGround == false)
+             {
+                 transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+                 transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
+             }
+         */
+
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.name == "floor")
+            {
+                shouldMove = false;
+            }
         }
     }
 }
