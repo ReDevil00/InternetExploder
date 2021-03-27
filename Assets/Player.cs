@@ -1,21 +1,22 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
     [SerializeField]
+<<<<<<< HEAD
     public GameObject floor;
 
     private Rigidbody2D rb2d;
 
     [SerializeField]
+=======
+>>>>>>> 55f1b81f88a9f434d311955e4a0965104f15ff70
     private float speed = 2;
 
     [SerializeField]
     public bool fight = false;
 
+<<<<<<< HEAD
     [SerializeField]
     private float fallSpeed = 3.0f;
 
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
+=======
+>>>>>>> 55f1b81f88a9f434d311955e4a0965104f15ff70
     // Update is called once per frame
     private void Update()
     {
@@ -37,6 +40,7 @@ public class Player : MonoBehaviour
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
+<<<<<<< HEAD
         if (Input.GetKey(KeyCode.DownArrow) && shouldMove)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
@@ -66,5 +70,22 @@ public class Player : MonoBehaviour
                 shouldMove = false;
             }
         }
+=======
+        Vector3 direction = Vector3.zero;
+        direction.x = rawHorizontalAxis;
+
+        if (fight == false)
+        {
+            direction.y = rawVerticalAxis;
+        }
+
+        float timeSinceLastFrame = Time.deltaTime;
+
+        Vector3 translation = direction * speed * timeSinceLastFrame;
+
+        transform.Translate(
+            translation
+        );
+>>>>>>> 55f1b81f88a9f434d311955e4a0965104f15ff70
     }
 }
