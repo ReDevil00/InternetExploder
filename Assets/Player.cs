@@ -9,9 +9,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         float rawHorizontalAxis = Input.GetAxisRaw("Horizontal");
+        float rawVerticalAxis = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = Vector3.zero;
         direction.x = rawHorizontalAxis;
+        direction.y = rawVerticalAxis;
 
         float timeSinceLastFrame = Time.deltaTime;
 
