@@ -1,12 +1,36 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
+    [SerializeField]
+    public GameObject floor;
+
+    private Rigidbody2D rb2d;
+
+    private Vector3 move = Vector3.zero;
+
     [SerializeField]
     private float speed = 2;
 
     [SerializeField]
     public bool fight = false;
+
+    [SerializeField]
+    private float fallSpeed = 3.0f;
+
+    [SerializeField]
+    private float spinSpeed = 500.0f;
+
+    [SerializeField]
+    private bool onGround = false;
+
+    private void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     private void Update()
@@ -14,20 +38,30 @@ public class Player : MonoBehaviour
         float rawHorizontalAxis = Input.GetAxisRaw("Horizontal");
         float rawVerticalAxis = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = Vector3.zero;
-        direction.x = rawHorizontalAxis;
+       /*
+        else if (onGround == false)
+            {
+                transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+                transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
+            }
+        */
 
-        if (fight == false)
+        move.x = rawHorizontalAxis;
+        if(fight == false)
         {
-            direction.y = rawVerticalAxis;
+            move.y = rawVerticalAxis;
         }
+         
+    }
+    
+    private void FixedUpdate()
+    {
+        if(move != Vector3.zero)
+        {
+            Vector3 translation = move * speed * Time.fixedDeltaTime;
+            Vector3 newPosition = transform.position + translation;
 
-        float timeSinceLastFrame = Time.deltaTime;
-
-        Vector3 translation = direction * speed * timeSinceLastFrame;
-
-        transform.Translate(
-            translation
-        );
+            rb2d.MovePosition(newPosition);
+        }
     }
 }
