@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class HandleCollisions : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    public GameObject cursor;
 
     // Start is called before the first frame update
     void Start()
