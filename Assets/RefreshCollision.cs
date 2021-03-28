@@ -32,6 +32,10 @@ public class RefreshCollision : MonoBehaviour
     public GameObject four;
     public GameObject five;
 
+    public GameObject exploder;
+    public GameObject exploderGray;
+    //public GameObject loading;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +68,7 @@ public class RefreshCollision : MonoBehaviour
             Destroy(gameObject);
 
             int numDamage = GameObject.Find("cursor").GetComponent<Player>().damageTaken;
+            GameObject.Find("refresh").GetComponent<SpawnRefresh>().bReset = false;
 
             switch (numDamage)
             {
@@ -72,30 +77,45 @@ public class RefreshCollision : MonoBehaviour
                         GameObject.Find("healthFull").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("healthFull"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 1:
                     Instantiate(two, new Vector3(GameObject.Find("health80(Clone)").transform.position.x,
                         GameObject.Find("health80(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health80(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 2:
                     Instantiate(three, new Vector3(GameObject.Find("health60(Clone)").transform.position.x,
                         GameObject.Find("health60(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health60(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 3:
                     Instantiate(four, new Vector3(GameObject.Find("health40(Clone)").transform.position.x,
                         GameObject.Find("health40(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health40(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 4:
                     Instantiate(five, new Vector3(GameObject.Find("health20(Clone)").transform.position.x,
                         GameObject.Find("health20(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health20(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     SceneManager.LoadScene("Outro");
                     break;
             }

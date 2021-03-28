@@ -181,3 +181,6 @@ MonoBehaviour:
   three: {fileID: 4759443648390500526, guid: f5bfba922c5b8ba43ad15c1f744311ef, type: 3}
   four: {fileID: 3900143932987688407, guid: f59ea61030a30e8499ba299422d62618, type: 3}
   five: {fileID: 7034288909937976015, guid: 2d2381debec7f194484e3348f21d9840, type: 3}
+  exploder: {fileID: 7101692954124186836, guid: c15692272965fe848bb231eb24983113, type: 3}
+  exploderGray: {fileID: 1191785521426327545, guid: 9d33bbfa214ba1644805459f1be6764e, type: 3}
+  loading: {fileID: 0}
