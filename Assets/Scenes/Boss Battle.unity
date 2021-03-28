@@ -351,7 +351,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &519420028
@@ -516,7 +516,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &868830746
@@ -598,7 +598,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1165681768
@@ -693,7 +693,7 @@ SpriteRenderer:
   m_Size: {x: 2.87, y: 2.86}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1668215040
@@ -841,7 +841,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1903630038
@@ -1074,7 +1074,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1934485521
@@ -1175,7 +1175,7 @@ SpriteRenderer:
   m_Size: {x: 8.84, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &7111925047763429617
@@ -1240,6 +1240,22 @@ PrefabInstance:
     - target: {fileID: 5406246047251818930, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
       propertyPath: m_Name
       value: cursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111925047553844982, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
+      propertyPath: m_Mass
+      value: 0.083720006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111925047553844982, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111925047553844982, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111925047553844982, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7111925047553844985, guid: d9fe6af3100683f42b2c91e438db3b8c, type: 3}
       propertyPath: floor
