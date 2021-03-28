@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class introExp : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject cursor;
+
     void Start()
     {
-        //GetComponent<Renderer>.enabled = false;
+        
     }
 
     // Update is called once per frame

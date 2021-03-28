@@ -7,14 +7,11 @@ public class edge : MonoBehaviour
     Vector3 originalPosition;
     int count;
     public GameObject exploder;
+    public GameObject cursor;
 
     void Start()
     {
         count = 0;
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
         originalPosition = transform.position;
     }
 
@@ -29,7 +26,8 @@ public class edge : MonoBehaviour
             count = count + 1;
             if(count == 100)
             {
-                Instantiate(exploder, new Vector3(-7, 3), Quaternion.identity);
+                Instantiate(exploder, new Vector3(-7.75f, 3.75f), Quaternion.identity);
+                cursor.GetComponent<Rigidbody2D>().gravityScale = 3.0f;
                 Destroy(gameObject);
             }
         }

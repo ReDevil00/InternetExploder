@@ -699,6 +699,7 @@ MonoBehaviour:
   leftWall: {fileID: 721583028}
   rightWall: {fileID: 1279827868}
   ceiling: {fileID: 0}
+  rb2d: {fileID: 0}
   speed: 3
 --- !u!50 &1937024947
 Rigidbody2D:
@@ -817,7 +818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63dda33e3ee7f7f4eb57ed70809ed3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exploder: {fileID: 9145224677832287136, guid: ca0487ce158d001408d60b5bb2e8e0a4, type: 3}
+  exploder: {fileID: 9077599777920168517, guid: 3989df83c48667546b903a56d74ca68e, type: 3}
+  cursor: {fileID: 1937024944}
 --- !u!61 &2057154123
 BoxCollider2D:
   m_ObjectHideFlags: 0
