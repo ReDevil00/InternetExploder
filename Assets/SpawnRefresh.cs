@@ -14,6 +14,8 @@ public class SpawnRefresh : MonoBehaviour
     private float InstantiationTimer = 1.5f;
     private double random;
     private System.Random rand = new System.Random();
+    public GameObject exploder;
+    public GameObject exploderGray;
 
     public GameObject refresh;
 
@@ -31,6 +33,12 @@ public class SpawnRefresh : MonoBehaviour
             random = (rand.NextDouble() * 18) - 9;
             Instantiate(refresh, new Vector3((float)random, 6, 0), Quaternion.identity);
             InstantiationTimer = 1f;
+        } else if (InstantiationTimer <= 5f && GameObject.Find("cursor").GetComponent<Player>().bReset == false)
+        {
+            Instantiate(exploder, new Vector3(GameObject.Find("exploderGray(Clone)").transform.position.x,
+                        GameObject.Find("exploderGray(Clone)").transform.position.y, 0), Quaternion.identity);
+            Destroy(GameObject.Find("exploderGray(Clone)"));
+            GameObject.Find("cursor").GetComponent<Player>().bReset = true;
         }
     }
 }

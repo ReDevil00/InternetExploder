@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     public bool hasShield = false;
     public int damageTaken = 0;
+    public bool bReset = true;
 
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;
