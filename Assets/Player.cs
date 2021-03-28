@@ -8,12 +8,24 @@ public class Player : MonoBehaviour
     [SerializeField]
     public GameObject floor;
 
+    [SerializeField]
+    public GameObject leftWall;
+
+    [SerializeField]
+    public GameObject rightWall;
+
+    [SerializeField]
+    public GameObject ceiling;
+
     private Rigidbody2D rb2d;
 
     [SerializeField]
     private float speed = 3;
 
-    bool shouldMove = true;
+    bool shouldMoveLeft = true;
+    bool shouldMoveRight = true;
+    bool shouldMoveUp = true;
+    bool shouldMoveDown = true;
 
     private void Awake()
     {
@@ -25,22 +37,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && shouldMove)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && shouldMoveUp)
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
-        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && shouldMove)
+        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && shouldMoveDown)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && shouldMoveLeft)
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && shouldMoveRight)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
@@ -49,7 +61,22 @@ public class Player : MonoBehaviour
         {
             if (collision.gameObject.name == "floor")
             {
-                shouldMove = false;
+                shouldMoveDown = false;
+            }
+
+            if(collision.gameObject.name == "leftWall")
+            {
+                shouldMoveLeft = false;
+            }
+            
+            if(collision.gameObject.name == "rightWall")
+            {
+                shouldMoveRight = false;
+            }
+
+            if(collision.gameObject.name == "ceiling")
+            {
+                shouldMoveUp = false;
             }
         }
 }
