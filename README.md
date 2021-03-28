@@ -8,12 +8,12 @@ A simple concept, but a lot of fun!
 ## Game Tips
 Move with either W/A/S/D or Arrow Keys.
 When in combat, you need to collect powerups and avoid hazards that Internet Exploder will throw at you.
-  > _Firewalls_ are the orange circles, they provide a one-time shield to avoid damage.
-  > _Refreshes_ are your offense against IE. It definitely can't handle many of those...
-  > _Viruses_ are red and need to be avoided, unless you want to get infected!
-  > _Malware_ is purple and has a skull. Spooky.
-  > _Bugs_ are bright green, try to avoid stepping on them!
-  > _Corrupt Data_ is rampant, avoid these to keep your info in line.
+  - _Firewalls_ are the orange circles, they provide a one-time shield to avoid damage.
+  - _Refreshes_ are your offense against IE. It definitely can't handle many of those...
+  - _Viruses_ are red and need to be avoided, unless you want to get infected!
+  - _Malware_ is purple and has a skull. Spooky.
+  - _Bugs_ are bright green, try to avoid stepping on them!
+  - _Corrupt Data_ is rampant, avoid these to keep your info in line.
 Watch out for extra tactics IE might pull on you, it's desperate to return and take over the world!
 ## Inspiration
 As a team mostly made of people who could have this hackathon be our very last one due to graduating soon,
