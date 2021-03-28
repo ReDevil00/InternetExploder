@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adacb34460c5e964c98549fe31926e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click: {fileID: 8300000, guid: 3d4bfe3d90c7a1f46adcb744ccbf55d0, type: 3}
+  click: {fileID: 8300000, guid: 88a60c5090ec1f145a8ef04e341436e1, type: 3}
   cursor: {fileID: 634205976}
   recycle: {fileID: 3433324270008574644, guid: d0cbea9f02cbf5c4eafff69e6d047244, type: 3}
   greyExploder: {fileID: 1991475773}
@@ -1021,7 +1021,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3d4bfe3d90c7a1f46adcb744ccbf55d0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88a60c5090ec1f145a8ef04e341436e1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

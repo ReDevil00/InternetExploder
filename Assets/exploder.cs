@@ -30,7 +30,7 @@ public class exploder : MonoBehaviour
         }
         if(collision.gameObject.name == "recycle(Clone)")
         {
-            Destroy(gameObject);
+            Application.Quit();
         }
     }
 }
