@@ -34,10 +34,10 @@ decide on certain aspects of the design like background music, hazard assets, an
 The fact that we essentially completed everything we set out to do this time around is definitely something we're proud of. 
 In the past, we had not really been able to do that.
 ## What we learned
-> How to utilize certain functions of Unity
-> How to connect Unity to GitHub
-> New techniques for using GitHub
-> How to stitch together a simple concept and story for a game
+- How to utilize certain functions of Unity
+- How to connect Unity to GitHub
+- New techniques for using GitHub
+- How to stitch together a simple concept and story for a game
 ## What's next for Internet Exploder
 In the early stages of development while we were still fleshing out the major points of the design, we had an idea to 
 increase the game's length by establishing a story of moving through the ages of technology and leaving IE behind, only for 
