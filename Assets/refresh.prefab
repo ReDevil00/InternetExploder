@@ -170,3 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf3bbd45f1356242bc9a104cfeff771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  full: {fileID: 2582146622270222714, guid: 363bec02dedd753439807437ad28a111, type: 3}
+  eighty: {fileID: 4999286512411974056, guid: b607f203cbe29a74ebcd84d67c9020e7, type: 3}
+  sixty: {fileID: 6077167012989106457, guid: 84d2fe829ea8fac409c4949e638adf17, type: 3}
+  forty: {fileID: 4759443648390500524, guid: f5bfba922c5b8ba43ad15c1f744311ef, type: 3}
+  twenty: {fileID: 3900143932987688405, guid: f59ea61030a30e8499ba299422d62618, type: 3}
+  empty: {fileID: 7034288909937976009, guid: 2d2381debec7f194484e3348f21d9840, type: 3}
