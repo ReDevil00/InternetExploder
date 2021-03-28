@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float speed = 3;
 
+    public bool hasShield = false;
+
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;
     bool shouldMoveUp = false;

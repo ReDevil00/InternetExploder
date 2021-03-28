@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class HandleCollisions : MonoBehaviour
 {
     private Rigidbody2D rb2D;
+    public GameObject shield;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,17 @@ public class HandleCollisions : MonoBehaviour
         //THIS WORKS :D
         if(col.gameObject.name == "cursor")
         {
-            SceneManager.LoadScene("Intro");
+            if (GameObject.Find("cursor").GetComponent<Player>().hasShield)
+            {
+                Destroy(GameObject.Find("shield(Clone)"));
+                GameObject.Find("cursor").GetComponent<Player>().hasShield = false;
+                Destroy(gameObject);
+            }
+            else
+            {
+                SceneManager.LoadScene("Intro");
+
+            }
         }   
     }
 }
