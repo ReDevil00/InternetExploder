@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
     public GameObject floor;
@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;
-    bool shouldMoveUp = false;
-    bool shouldMoveDown = false;
+    bool shouldMoveUp = true;
+    bool shouldMoveDown = true;
 
     private void Awake()
     {
@@ -57,28 +57,28 @@ public class Player : MonoBehaviour
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
     }
-        void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "floor")
         {
-            if (collision.gameObject.name == "floor")
-            {
-                shouldMoveDown = false;
-            }
-
-            if(collision.gameObject.name == "leftWall")
-            {
-                shouldMoveLeft = false;
-            }
-            
-            if(collision.gameObject.name == "rightWall")
-            {
-                shouldMoveRight = false;
-            }
-
-            if(collision.gameObject.name == "ceiling")
-            {
-                shouldMoveUp = false;
-            }
+            shouldMoveDown = false;
         }
+
+        if (collision.gameObject.name == "leftWall")
+        {
+            shouldMoveLeft = false;
+        }
+
+        if (collision.gameObject.name == "rightWall")
+        {
+            shouldMoveRight = false;
+        }
+
+        if (collision.gameObject.name == "ceiling")
+        {
+            shouldMoveUp = false;
+        }
+    }
 }
 
-      
+
