@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb2d;
 
     [SerializeField]
-    private float speed = 2;
+    private float speed = 3;
 
     bool shouldMove = true;
 
@@ -25,22 +25,22 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow) && shouldMove)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && shouldMove)
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && shouldMove)
+        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && shouldMove)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
