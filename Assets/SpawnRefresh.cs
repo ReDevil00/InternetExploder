@@ -17,6 +17,12 @@ public class SpawnRefresh : MonoBehaviour
     public GameObject exploder;
     public GameObject exploderGray;
 
+    public GameObject dia4;
+    public GameObject dia5;
+    public GameObject dia6;
+    public GameObject dia7;
+    int count = 0;
+
     public GameObject refresh;
 
     // Update is called once per frame
@@ -38,6 +44,23 @@ public class SpawnRefresh : MonoBehaviour
             Instantiate(exploder, new Vector3(GameObject.Find("exploderGray(Clone)").transform.position.x,
                         GameObject.Find("exploderGray(Clone)").transform.position.y, 0), Quaternion.identity);
             Destroy(GameObject.Find("exploderGray(Clone)"));
+            count++;
+            if(count == 1)
+            {
+		Instantiate(dia4, new Vector3(3,3), Quaternion.identity);
+            }
+	    if(count == 2)
+            {
+		Instantiate(dia5, new Vector3(4,3), Quaternion.identity);
+            }
+	    if(count == 3)
+            {
+		Instantiate(dia6, new Vector3(5,3), Quaternion.identity);
+            }
+	    if(count == 4)
+            {
+		Instantiate(dia7, new Vector3(3,3), Quaternion.identity);
+            }
             GameObject.Find("cursor").GetComponent<Player>().bReset = true;
         }
     }
