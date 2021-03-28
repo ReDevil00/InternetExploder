@@ -22,7 +22,7 @@ public class exploder : MonoBehaviour
         if(collider.gameObject.name == "cursor")
         {
             
-            GameObject.Find("cursor").GetComponent<InputScreenPlayer>().hasExploder = true;
+            //GameObject.Find("cursor").GetComponent<InputScreenPlayer>().hasExploder = true;
             Instantiate(recycle, new Vector3(7.75f, 3.0f), Quaternion.identity);
             GameObject.Find("exploderGray").transform.parent = cursor.transform;
             GetComponent<AudioSource>().Play();
