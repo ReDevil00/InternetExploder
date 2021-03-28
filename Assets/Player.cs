@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;
-    bool shouldMoveUp = true;
-    bool shouldMoveDown = true;
+    bool shouldMoveUp = false;
+    bool shouldMoveDown = false;
 
     private void Awake()
     {
