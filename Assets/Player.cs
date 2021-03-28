@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     private float speed = 3;
 
     public bool hasShield = false;
+    public int damageTaken = 0;
 
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;

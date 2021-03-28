@@ -11,7 +11,7 @@ public class SpawnRefresh : MonoBehaviour
 
     }
 
-    private float InstantiationTimer = 15f;
+    private float InstantiationTimer = 1.5f;
     private double random;
     private System.Random rand = new System.Random();
 
@@ -30,7 +30,7 @@ public class SpawnRefresh : MonoBehaviour
         {
             random = (rand.NextDouble() * 18) - 9;
             Instantiate(refresh, new Vector3((float)random, 6, 0), Quaternion.identity);
-            InstantiationTimer = 15f;
+            InstantiationTimer = 1f;
         }
     }
 }
