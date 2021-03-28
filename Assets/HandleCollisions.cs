@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class HandleCollisions : MonoBehaviour
@@ -28,6 +29,9 @@ public class HandleCollisions : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         //THIS WORKS :D
-        
+        if(col.gameObject.name == "cursor")
+        {
+            SceneManager.LoadScene("Intro");
+        }   
     }
 }
