@@ -26,6 +26,12 @@ public class RefreshCollision : MonoBehaviour
     [SerializeField]
     private SpriteRenderer empty;
 
+    public GameObject one;
+    public GameObject two;
+    public GameObject three;
+    public GameObject four;
+    public GameObject five;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,8 +62,45 @@ public class RefreshCollision : MonoBehaviour
         if (col.gameObject.name == "cursor")
         {
             Destroy(gameObject);
-            
-            if(eighty.sortingOrder != 10)
+
+            int numDamage = GameObject.Find("cursor").GetComponent<Player>().damageTaken;
+
+            switch (numDamage)
+            {
+                case 0:
+                    Instantiate(one, new Vector3(GameObject.Find("healthFull").transform.position.x,
+                        GameObject.Find("healthFull").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("healthFull"));
+                    GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    break;
+                case 1:
+                    Instantiate(two, new Vector3(GameObject.Find("health80(Clone)").transform.position.x,
+                        GameObject.Find("health80(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("health80(Clone)"));
+                    GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    break;
+                case 2:
+                    Instantiate(three, new Vector3(GameObject.Find("health60(Clone)").transform.position.x,
+                        GameObject.Find("health60(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("health60(Clone)"));
+                    GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    break;
+                case 3:
+                    Instantiate(four, new Vector3(GameObject.Find("health40(Clone)").transform.position.x,
+                        GameObject.Find("health40(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("health40(Clone)"));
+                    GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    break;
+                case 4:
+                    Instantiate(five, new Vector3(GameObject.Find("health20(Clone)").transform.position.x,
+                        GameObject.Find("health20(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("health20(Clone)"));
+                    GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
+                    SceneManager.LoadScene("Outro");
+                    break;
+            }
+
+            /*if(eighty.sortingOrder != 10)
             {
                 eighty.sortingOrder += 1;
                 sixty.sortingOrder += 1;
@@ -87,7 +130,7 @@ public class RefreshCollision : MonoBehaviour
             else if(empty.sortingOrder != 10)
             {
                 empty.sortingOrder += 1;
-            }
+            }*/
            
 
         }

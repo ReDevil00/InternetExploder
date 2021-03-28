@@ -11,7 +11,7 @@ public class SpawnFirewall : MonoBehaviour
 
     }
 
-    private float InstantiationTimer = 1.5f;
+    private float InstantiationTimer = 7.5f;
     private double random;
     private System.Random rand = new System.Random();
 
@@ -30,7 +30,7 @@ public class SpawnFirewall : MonoBehaviour
         {
             random = (rand.NextDouble() * 18) - 9;
             Instantiate(firewall, new Vector3((float)random, 6, 0), Quaternion.identity);
-            InstantiationTimer = 1f;
+            InstantiationTimer = 15f;
         }
     }
 }
