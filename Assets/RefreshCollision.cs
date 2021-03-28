@@ -43,7 +43,7 @@ public class RefreshCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -70,7 +70,8 @@ public class RefreshCollision : MonoBehaviour
         if (col.gameObject.name == "cursor")
         {
             Destroy(gameObject);
-
+            GameObject.Find("cursor").GetComponent<AudioSource>().Play();
+            
             int numDamage = GameObject.Find("cursor").GetComponent<Player>().damageTaken;
             GameObject.Find("cursor").GetComponent<Player>().bReset = false;
             

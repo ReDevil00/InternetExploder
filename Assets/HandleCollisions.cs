@@ -31,6 +31,7 @@ public class HandleCollisions : MonoBehaviour
         //THIS WORKS :D
         if(col.gameObject.name == "cursor")
         {
+            GameObject.Find("DamageSound").GetComponent<AudioSource>().Play();
             if (GameObject.Find("cursor").GetComponent<Player>().hasShield)
             {
                 Destroy(GameObject.Find("shield(Clone)"));

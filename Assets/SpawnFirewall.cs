@@ -5,10 +5,13 @@ using System;
 
 public class SpawnFirewall : MonoBehaviour
 {
+
+    public AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
-
+	sound = GetComponent<AudioSource>();
     }
 
     private float InstantiationTimer = 7.5f;

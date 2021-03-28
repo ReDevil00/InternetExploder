@@ -31,11 +31,16 @@ public class FirewallCollision : MonoBehaviour
         if (col.gameObject.name == "cursor")
         {
             //Handle Firewall
-            GameObject.Find("cursor").GetComponent<Player>().hasShield = true;
+            
+            GameObject.Find("firewall").GetComponent<AudioSource>().Play();
 
-            var newFirewall = Instantiate(firewall, new Vector3(col.gameObject.transform.position.x,
-                col.gameObject.transform.position.y, 0), Quaternion.identity);
-            newFirewall.transform.parent = col.transform;
+	    if(!GameObject.Find("cursor").GetComponent<Player>().hasShield)
+            {
+                var newFirewall = Instantiate(firewall, new Vector3(col.gameObject.transform.position.x,
+                    col.gameObject.transform.position.y, 0), Quaternion.identity);
+                newFirewall.transform.parent = col.transform;
+            }
+	    GameObject.Find("cursor").GetComponent<Player>().hasShield = true;
 
             Destroy(gameObject); //Destroy the firewall powerup object
         }
