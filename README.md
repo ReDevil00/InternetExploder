@@ -1,5 +1,8 @@
 ## Internet Exploder
-A game about fighting off the vengeful return of Internet Explorer! 
+A game about fighting off the vengeful return of Internet Explorer! You can download this Unity Project and run it
+in your own local environment, or you can follow this link:
+[link](https://drive.google.com/file/d/15c6dWkipFPgXtJl5-JG73SYejWAnWRUG/view?usp=sharing) to download the EXE
+file and its dependencies in the form of a compressed file!
 ## What it does
 **Internet Exploder** is a game that's based around the idea of the vengeful return of Internet Explorer. 
 Many people remember how slow and buggy it was at times, and we wanted to capture that in this game. 
