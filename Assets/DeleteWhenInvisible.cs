@@ -13,7 +13,7 @@ public class DeleteWhenInvisible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y <= -10)
+        if(transform.position.y <= -6)
         {
             GameObject.Destroy(gameObject);
         } 

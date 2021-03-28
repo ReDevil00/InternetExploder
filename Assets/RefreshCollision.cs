@@ -32,14 +32,6 @@ public class RefreshCollision : MonoBehaviour
     public GameObject four;
     public GameObject five;
 
-    public GameObject exploder;
-    public GameObject exploderGray;
-
-    public GameObject error1;
-    public GameObject error2;
-    public GameObject error3;
-    public GameObject error4;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +64,6 @@ public class RefreshCollision : MonoBehaviour
             Destroy(gameObject);
 
             int numDamage = GameObject.Find("cursor").GetComponent<Player>().damageTaken;
-            GameObject.Find("refresh").GetComponent<SpawnRefresh>().bReset = false;
 
             switch (numDamage)
             {
@@ -94,6 +85,7 @@ public class RefreshCollision : MonoBehaviour
                         GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("exploder1(Clone)"));
                     Instantiate(error1, new Vector3(-6, 2, 0), Quaternion.identity);
+
                     break;
                 case 2:
                     Instantiate(three, new Vector3(GameObject.Find("health60(Clone)").transform.position.x,
