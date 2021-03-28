@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class leftWall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody2D rb2D;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        rb2D = GetComponent<Rigidbody2D>();
     }
 }
