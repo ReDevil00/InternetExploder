@@ -31,7 +31,7 @@ public class SpawnFirewall : MonoBehaviour
         InstantiationTimer -= Time.deltaTime;
         if (InstantiationTimer <= 0)
         {
-            random = (rand.NextDouble() * 18) - 9;
+            random = (rand.NextDouble() * 17) - 8.5;
             Instantiate(firewall, new Vector3((float)random, 6, 0), Quaternion.identity);
             InstantiationTimer = 15f;
         }

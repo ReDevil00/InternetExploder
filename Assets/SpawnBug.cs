@@ -28,7 +28,7 @@ public class SpawnBug : MonoBehaviour
         InstantiationTimer -= Time.deltaTime;
         if (InstantiationTimer <= 0)
         {
-            random = (rand.NextDouble() * 18) - 9;
+            random = (rand.NextDouble() * 16) - 8;
             Instantiate(bug, new Vector3((float)random, 6, 0), Quaternion.identity);
             InstantiationTimer = 1.2f;
         }

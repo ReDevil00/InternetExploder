@@ -94,8 +94,6 @@ public class RefreshCollision : MonoBehaviour
                     Instantiate(exploderGray, new Vector3(GameObject.Find("exploder1(Clone)").transform.position.x,
                         GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("exploder1(Clone)"));
-                    Instantiate(error1, new Vector3(-6, 2, 0), Quaternion.identity);
-
 
                     break;
                 case 2:

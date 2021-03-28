@@ -984,6 +984,9 @@ MonoBehaviour:
   dia5: {fileID: 261602999366459097, guid: b4a481325ba847949a53ff0ec80398c0, type: 3}
   dia6: {fileID: 7838833003151429552, guid: 5f19bf1688aecb443994f2a5a264f012, type: 3}
   dia7: {fileID: 4791219988865912434, guid: c823ebd8cf97a5e4683732e77a2fa96d, type: 3}
+  err1: {fileID: 8667940882661000318, guid: 76ab4686c66c7764399f05244c825766, type: 3}
+  err2: {fileID: 8769053880369501910, guid: c9417c5f16c12394da2b680ca3c42faf, type: 3}
+  err3: {fileID: 5636606051154885598, guid: e8e865f0329655f47a2f71f1fdf39ec6, type: 3}
   refresh: {fileID: 2520282376815293782, guid: 05d30bb56be9c0b48b0ca6cd76305c17, type: 3}
 --- !u!212 &778512096
 SpriteRenderer:

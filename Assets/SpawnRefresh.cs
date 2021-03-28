@@ -22,6 +22,9 @@ public class SpawnRefresh : MonoBehaviour
     public GameObject dia6;
     public GameObject dia7;
     int count = 0;
+    public GameObject err1;
+    public GameObject err2;
+    public GameObject err3;
 
     public GameObject refresh;
 
@@ -36,7 +39,7 @@ public class SpawnRefresh : MonoBehaviour
         InstantiationTimer -= Time.deltaTime;
         if (InstantiationTimer <= 0)
         {
-            random = (rand.NextDouble() * 18) - 9;
+            random = (rand.NextDouble() * 17) - 8.5;
             Instantiate(refresh, new Vector3((float)random, 6, 0), Quaternion.identity);
             InstantiationTimer = 15f;
         } else if (InstantiationTimer <= 5f && GameObject.Find("cursor").GetComponent<Player>().bReset == false)
@@ -52,14 +55,17 @@ public class SpawnRefresh : MonoBehaviour
 	    if(count == 2)
             {
 		Instantiate(dia5, new Vector3(4,3), Quaternion.identity);
+		Instantiate(err1, new Vector3(-6,2), Quaternion.identity);
             }
 	    if(count == 3)
             {
 		Instantiate(dia6, new Vector3(5,3), Quaternion.identity);
+		Instantiate(err2, new Vector3(1,0), Quaternion.identity);
             }
 	    if(count == 4)
             {
 		Instantiate(dia7, new Vector3(3,3), Quaternion.identity);
+		Instantiate(err3, new Vector3(-1,-2), Quaternion.identity);
             }
             GameObject.Find("cursor").GetComponent<Player>().bReset = true;
         }
