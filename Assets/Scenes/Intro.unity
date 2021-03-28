@@ -839,10 +839,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2967b39c82314bc49a01d2306ba07976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 0}
-  leftWall: {fileID: 0}
-  rightWall: {fileID: 0}
-  ceiling: {fileID: 0}
+  floor: {fileID: 1379450889}
+  leftWall: {fileID: 633082938}
+  rightWall: {fileID: 568131012}
+  ceiling: {fileID: 663526538}
   speed: 3
 --- !u!50 &2012668917
 Rigidbody2D:
