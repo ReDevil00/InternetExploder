@@ -17,16 +17,20 @@ public class exploder : MonoBehaviour
         GetComponent<AudioSource>().clip = click;
     }
 
-    void OnTriggerStay2D(Collider2D collider)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if(collider.gameObject.name == "cursor")
+        if(collision.gameObject.name == "cursor")
         {
-            
+            GetComponent<AudioSource>().Play();
             //GameObject.Find("cursor").GetComponent<InputScreenPlayer>().hasExploder = true;
             Instantiate(recycle, new Vector3(7.75f, 3.0f), Quaternion.identity);
             GameObject.Find("exploderGray").transform.parent = cursor.transform;
-            //GetComponent<AudioSource>().Play();
+            
 
+        }
+        if(collision.gameObject.name == "recycle")
+        {
+            Destroy(greyExploder);
         }
     }
 }
