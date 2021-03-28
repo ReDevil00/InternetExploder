@@ -183,4 +183,7 @@ MonoBehaviour:
   five: {fileID: 7034288909937976015, guid: 2d2381debec7f194484e3348f21d9840, type: 3}
   exploder: {fileID: 7101692954124186836, guid: c15692272965fe848bb231eb24983113, type: 3}
   exploderGray: {fileID: 1191785521426327545, guid: 9d33bbfa214ba1644805459f1be6764e, type: 3}
-  loading: {fileID: 0}
+  error1: {fileID: 5632219282370870880, guid: 5e9d82fa7232706428d5e343a86faf1c, type: 3}
+  error2: {fileID: 2328435853070523115, guid: 18c39dd0c41439442a3df744b218b7bb, type: 3}
+  error3: {fileID: 5913750143547652512, guid: 663cea799e635784095504d487c31d5b, type: 3}
+  error4: {fileID: 4511060167163774326, guid: b8534eef13986134e8eda2d26404fa85, type: 3}
