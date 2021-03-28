@@ -21,8 +21,6 @@ public class InputScreenPlayer : MonoBehaviour
     [SerializeField]
     private float speed = 3;
 
-    public bool hasExploder = false;
-
     bool shouldMoveLeft = true;
     bool shouldMoveRight = true;
     bool shouldMoveUp = true;
