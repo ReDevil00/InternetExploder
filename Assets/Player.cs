@@ -10,25 +10,16 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
-    private Vector3 move = Vector3.zero;
-
     [SerializeField]
     private float speed = 2;
-
-    [SerializeField]
-    public bool fight = false;
-
-    [SerializeField]
-    private float fallSpeed = 3.0f;
-
-    [SerializeField]
-    private float spinSpeed = 500.0f;
 
     bool shouldMove = true;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        rb2d.gravityScale = 0.0f;
+        rb2d.velocity = Vector2.zero;
     }
 
     // Update is called once per frame
@@ -53,13 +44,6 @@ public class Player : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
-        /*
-         else if (onGround == false)
-             {
-                 transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
-                 transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
-             }
-         */
     }
         void OnCollisionEnter(Collision collision)
         {
