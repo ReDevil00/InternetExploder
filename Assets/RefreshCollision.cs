@@ -80,9 +80,9 @@ public class RefreshCollision : MonoBehaviour
                         GameObject.Find("healthFull").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("healthFull"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
-                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder1(Clone)").transform.position.x,
-                        GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
-                    Destroy(GameObject.Find("exploder1(Clone)"));
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 1:
                     Instantiate(two, new Vector3(GameObject.Find("health80(Clone)").transform.position.x,
@@ -94,33 +94,34 @@ public class RefreshCollision : MonoBehaviour
                     Destroy(GameObject.Find("exploder1(Clone)"));
                     Instantiate(error1, new Vector3(-6, 2, 0), Quaternion.identity);
 
+
                     break;
                 case 2:
                     Instantiate(three, new Vector3(GameObject.Find("health60(Clone)").transform.position.x,
                         GameObject.Find("health60(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health60(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
-                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder1(Clone)").transform.position.x,
-                        GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
-                    Destroy(GameObject.Find("exploder1(Clone)"));
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 3:
                     Instantiate(four, new Vector3(GameObject.Find("health40(Clone)").transform.position.x,
                         GameObject.Find("health40(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health40(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
-                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder1(Clone)").transform.position.x,
-                        GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
-                    Destroy(GameObject.Find("exploder1(Clone)"));
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     break;
                 case 4:
                     Instantiate(five, new Vector3(GameObject.Find("health20(Clone)").transform.position.x,
                         GameObject.Find("health20(Clone)").transform.position.y, 0), Quaternion.identity);
                     Destroy(GameObject.Find("health20(Clone)"));
                     GameObject.Find("cursor").GetComponent<Player>().damageTaken++;
-                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder1(Clone)").transform.position.x,
-                        GameObject.Find("exploder1(Clone)").transform.position.y, 0), Quaternion.identity);
-                    Destroy(GameObject.Find("exploder1(Clone)"));
+                    Instantiate(exploderGray, new Vector3(GameObject.Find("exploder(Clone)").transform.position.x,
+                        GameObject.Find("exploder(Clone)").transform.position.y, 0), Quaternion.identity);
+                    Destroy(GameObject.Find("exploder(Clone)"));
                     SceneManager.LoadScene("Outro");
                     break;
             }
