@@ -16,7 +16,7 @@ public class InputScreenPlayer : MonoBehaviour
     [SerializeField]
     public GameObject ceiling;
 
-    private Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     [SerializeField]
     private float speed = 3;
