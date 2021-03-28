@@ -34,7 +34,11 @@ public class RefreshCollision : MonoBehaviour
 
     public GameObject exploder;
     public GameObject exploderGray;
-    //public GameObject loading;
+
+    public GameObject error1;
+    public GameObject error2;
+    public GameObject error3;
+    public GameObject error4;
 
     // Start is called before the first frame update
     void Start()

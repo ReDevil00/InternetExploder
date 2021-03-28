@@ -876,8 +876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4705cdc85abe718438e57d8120e093ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exploder: {fileID: 9077599777920168517, guid: 3989df83c48667546b903a56d74ca68e, type: 3}
+  exploder: {fileID: 7101692954124186836, guid: c15692272965fe848bb231eb24983113, type: 3}
   exploderGray: {fileID: 2520282376815293782, guid: 05d30bb56be9c0b48b0ca6cd76305c17, type: 3}
+  bReset: 1
   refresh: {fileID: 2520282376815293782, guid: 05d30bb56be9c0b48b0ca6cd76305c17, type: 3}
 --- !u!212 &778512096
 SpriteRenderer:
@@ -1604,7 +1605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7101692954124186836, guid: c15692272965fe848bb231eb24983113, type: 3}
       propertyPath: m_Name
-      value: exploder(Clone)
+      value: exploder1(Clone)
       objectReference: {fileID: 0}
     - target: {fileID: 7740244798066612192, guid: c15692272965fe848bb231eb24983113, type: 3}
       propertyPath: m_RootOrder
