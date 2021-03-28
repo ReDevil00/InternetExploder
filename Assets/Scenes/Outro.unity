@@ -500,7 +500,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: dc6fcec580b731e4289919cb2a760195, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -942,7 +942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 124140489e9193e4dbdcf4f6661ff13a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   click: {fileID: 8300000, guid: 3d4bfe3d90c7a1f46adcb744ccbf55d0, type: 3}
   cursor: {fileID: 634205976}
-  recycle: {fileID: 3433324270008574644, guid: 85fed2bf9b2035149becf4c33ba727cb, type: 3}
+  recycle: {fileID: 3433324270008574644, guid: d0cbea9f02cbf5c4eafff69e6d047244, type: 3}
   greyExploder: {fileID: 1991475773}
 --- !u!61 &1991475777
 BoxCollider2D:

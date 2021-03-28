@@ -28,9 +28,9 @@ public class exploder : MonoBehaviour
             
 
         }
-        if(collision.gameObject.name == "recycle")
+        if(collision.gameObject.name == "recycle(Clone)")
         {
-            Destroy(greyExploder);
+            Destroy(gameObject);
         }
     }
 }
