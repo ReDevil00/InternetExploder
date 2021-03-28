@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2771582994445367519}
   - component: {fileID: 2656508267340153973}
   - component: {fileID: 5942304595269840666}
+  - component: {fileID: 6844252472979474641}
   m_Layer: 0
   m_Name: exploder
   m_TagString: Untagged
@@ -95,7 +96,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e14e6007bcd517147891eea8bf68b50d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -179,3 +180,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6844252472979474641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9077599777920168517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7e04d95e268ef41aa4351db64fcf78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

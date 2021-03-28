@@ -8,6 +8,7 @@ public class edge : MonoBehaviour
     int count;
     public GameObject exploder;
     public GameObject cursor;
+    public GameObject waypoints;
 
     void Start()
     {
